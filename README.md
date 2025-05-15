@@ -1,36 +1,56 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 GPFlow – A Developer-Focused Workflow Automation Engine (Portfolio Project)
 
-## Getting Started
+**GPFlow** is a **portfolio project** that reimagines workflow automation tools like n8n through a modern, developer-centric lens. It demonstrates my ability to design, build, and scale a visual automation system using **TypeScript**, **Next.js**, and **secure code execution techniques**.
 
-First, run the development server:
+> ⚠️ **Frontend UI development is currently in progress** using **Next.js App Router** and **React Flow** for drag-and-drop workflow building.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🧠 Key Objectives
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Showcase **OOP-driven architecture** and reusable design patterns.
+- Build a **custom workflow engine** that runs node-based automation logic.
+- Enable **secure JS execution** using `worker_threads` and `isolated-vm` (no `eval` or `vm2`).
+- Provide a maintainable, clean frontend foundation (in progress).
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🔧 Technologies & Architecture
 
-To learn more about Next.js, take a look at the following resources:
+| Area            | Stack                                           |
+|-----------------|--------------------------------------------------|
+| Frontend        | Next.js App Router, React Flow, Tailwind CSS _(WIP)_ |
+| Backend/Core    | TypeScript, Node.js, Worker Threads              |
+| Execution Layer | isolated-vm, Handlebars templating, JEXL         |
+| Email           | Nodemailer with dynamic `From` and `Reply-To`    |
+| Patterns        | Factory Pattern, Registry Pattern, Pure OOP      |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📦 Supported Node Types
 
-## Deploy on Vercel
+- **HTTP Node** – Trigger APIs with dynamic input
+- **Webhook Node** – Create and receive custom webhook requests
+- **Function Node** – Run secure JS logic inside sandboxed workers
+- **Condition Node** – Branch logic dynamically using JEXL
+- **Delay Node** – Pause workflow execution for specified time
+- **Email Node** – Send templated emails (Gmail support included)
+- **GPT Node (Planned)** – Integrate OpenAI-powered logic blocks
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 💡 Why I Built This
+
+This project is part of my transition into **AI and automation-focused roles**. I wanted to challenge myself with a real-world system that blends:
+
+- **Backend systems engineering**
+- **Frontend UX for visual builders** (coming soon)
+- **Secure code execution**
+- **Modern, scalable TypeScript design**
+
+It serves as a **foundation** for future AI-integrated automation platforms.
+
+---
+
+> ✅ Built with real-world system design in mind, GPFlow is more than a clone — it’s a showcase of how I design, think, and build.
+
