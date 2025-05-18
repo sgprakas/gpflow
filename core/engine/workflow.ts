@@ -1,6 +1,7 @@
 import { Node, NodeResult, NodeType, Workflow } from "../models/node";
 import { CONFIG_SYMBOL, ExecutionSuccess } from "../models/result";
 import { BaseNode } from "../nodes/base";
+import flowBus from "./eventbus";
 import { NodeFactory } from "./factory";
 
 type NodeOutput = Record<string, any>
@@ -9,6 +10,7 @@ export class WorkflowEngine {
     constructor(private workflow: Workflow) { }
 
     async run(initial?: any): Promise<NodeOutput> {
+        const workflowId = this.workflow.id
         const nodes = this.workflow.nodes
         const outputs: NodeOutput = {}
         const nodeMap = Object.fromEntries(nodes.map(n => [n.id, n]))
@@ -31,6 +33,8 @@ export class WorkflowEngine {
             console.log(`Node ${currentNode.id} executed in ${executionTime} milliseconds.`);
 
             output.executionTime = executionTime
+
+            flowBus.emit(workflowId, { output });
 
             outputs[currentNode.id] = output
 

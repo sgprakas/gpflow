@@ -1,5 +1,6 @@
 "use client";
 
+import { useRouter } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { Card, CardHeader, CardContent } from "@/components/ui/card";
@@ -70,6 +71,8 @@ export default function WorkflowPage() {
     active: staticWorkflows.filter(w => w.status === "on").length
   };
 
+  const router = useRouter();
+
   return (
     <div className="flex h-screen font-sans">
       {/* Main Content */}
@@ -88,7 +91,10 @@ export default function WorkflowPage() {
 
             <Button
               variant="outline"
-              onClick={() => {/* Add workflow logic */}}
+              onClick={() => {
+                const newId = `workflow-${Date.now()}`;
+                router.push(`/workflow/${newId}`);
+              }}
               className={cn(
                 "w-fit group flex items-center gap-2",
                 "bg-white hover:bg-indigo-600 border-indigo-200",
